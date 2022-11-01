@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class KullaniciOdev  {
+        public static void main(String[] args){
+    String kullaniciAdi, sifre, yenileme, yeniSifre;
+    Scanner input = new Scanner(System.in);
+    System.out.print("Kullanıcı Adı : ");
+            kullaniciAdi = input.next();
+    System.out.print("Şifre : ");
+            sifre = input.next();
+    if (kullaniciAdi.equals("patika") && (sifre.equals("123"))) {
+        System.out.println("Giriş Başarılı");
+    }
+    else {
+        System.out.println("Yanlış Giriş");
+        System.out.println("Sıfırlamak İster Misiniz");
+        System.out.println("1-Evet\n2-Hayır");
+        System.out.print("Nasıl İlerlemek İstiyorsunuz : ");
+        yenileme = input.next();
+        if (yenileme.equals("1")) {
+            System.out.print("Yeni Şifreniz : ");
+            yeniSifre = input.next();
+            if (yeniSifre.equals("123")) {
+                System.out.println("Girilen Şifre Eski Şifreniz Aynı Olmamalı");
+            }
+            else {
+                System.out.println("Başarıyla Oluşturuldu");
+            }
+        }
+        else if (yenileme.equals("2")){
+            System.out.println("Program Sonlandırıldı");
+        }
+    }
+}
+}
